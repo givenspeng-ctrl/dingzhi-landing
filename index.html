@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼎质设计工程 | 烂尾工程终结者 · 报价即结算 · 别墅装修专家</title>
+    <meta name="description" content="25年设计施工联合体，专治别墅烂尾工程、渗漏返工、结构加固。报价即结算，100%按时保质交付。微信GR2026">
+    
+    <!-- Open Graph for WeChat/Sharing -->
+    <meta property="og:title" content="鼎质设计工程 | 烂尾工程终结者">
+    <meta property="og:description" content="专治别墅烂尾工程，报价即结算，100%按时交付。微信GR2026">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+    <meta property="og:type" content="website">
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success: #07c160;
+            --alert: #ff4d4f;
+            --accent-gold: #f7a940;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --text-primary: #2d3436;
+            --text-secondary: #636e72;
+            --shadow: 0 8px 30px rgba(0,0,0,0.12);
+            --radius: 16px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+            line-height: 1.6; color: var(--text-primary); background: var(--bg-light);
+            font-size: 16px; overflow-x: hidden;
+        }
+
+        .hero {
+            background: var(--primary-gradient); min-height: 100vh; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; text-align: center; color: white; padding: 3rem 1.5rem;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite alternate;
+        }
+        @keyframes float {
+            0% { opacity: 0.6; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .hero-content { position: relative; z-index: 1; max-width: 500px; }
+        .hero-badge {
+            background: rgba(255,255,255,0.2); padding: 0.6rem 1.8rem; border-radius: 50px;
+            font-size: 1.02rem; letter-spacing: 0.15em; margin-bottom: 1.5rem; backdrop-filter: blur(10px);
+            font-weight: 600;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 3.5rem); font-weight: 700; margin-bottom: 1rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3); line-height: 1.2;
+        }
+        .hero-tagline {
+            font-size: clamp(1.1rem, 4vw, 1.6rem); font-weight: 600; color: var(--accent-gold);
+            margin-bottom: 2rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .hero-features {
+            display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; font-size: 0.95rem;
+            margin-bottom: 2.5rem; max-width: 400px;
+        }
+        .hero-features span {
+            background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;
+            font-weight: 500; min-width: 120px; text-align: center;
+        }
+
+        .cta-group {
+            display: flex; flex-direction: column; gap: 1rem; width: 100%; max-width: 400px; margin: 0 auto;
+        }
+        .btn {
+            padding: 1.2rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 600;
+            text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+            transition: all 0.3s ease; box-shadow: var(--shadow); min-height: 48px;
+            touch-action: manipulation;
+        }
+        .btn-primary { background: var(--success); color: white; }
+        .btn-secondary { background: var(--alert); color: white; }
+        .btn:hover, .btn:active { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0,0,0,0.25); }
+
+        .qr-section { 
+            background: rgba(255,255,255,0.15); border-radius: var(--radius); 
+            padding: 1.5rem; margin: 1rem 0; backdrop-filter: blur(10px); 
+        }
+        .qr-code { max-width: 180px; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+
+        .section { padding: 3rem 1.5rem; max-width: 600px; margin: 0 auto; }
+        .section-title {
+            font-size: clamp(1.6rem, 6vw, 2.2rem); text-align: center; margin-bottom: 1rem;
+            font-weight: 700; color: var(--text-primary);
+        }
+        .section-subtitle {
+            text-align: center; color: var(--text-secondary); font-size: 1rem; margin-bottom: 2rem; font-weight: 500;
+        }
+
+        /* 🎨 三张卡片全部紫色渐变背景 - 完全统一 */
+        .cards { display: flex; flex-direction: column; gap: 1.5rem; }
+        .card {
+            background: var(--primary-gradient) !important;
+            padding: 1.5rem; 
+            border-radius: var(--radius); 
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            color: white;
+            border-left: 4px solid rgba(255,255,255,0.3);
+            position: relative; overflow: hidden;
+        }
+        .card::before {
+            content: ''; 
+            position: absolute; 
+            left: 0; top: 0; bottom: 0; 
+            width: 4px; 
+            background: rgba(255,255,255,0.5);
+        }
+        .card h3, .card p { 
+            color: rgba(255,255,255,0.95) !important; 
+            position: relative; z-index: 1;
+        }
+        .card-icon { 
+            font-size: 2rem; 
+            margin-bottom: 1rem; 
+            text-align: center; 
+            position: relative; z-index: 1;
+        }
+        .card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 20px 50px rgba(102,126,234,0.4); 
+        }
+
+        .process { display: flex; flex-direction: column; gap: 2rem; }
+        .process-step {
+            display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem; background: white;
+            border-radius: var(--radius); box-shadow: var(--shadow);
+        }
+        .process-number {
+            width: 45px; height: 45px; background: var(--primary-gradient); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.1rem; flex-shrink: 0;
+        }
+
+        /* 客户口碑 - 标准双引号 + 统一渐变边框 */
+        .testimonials { display: flex; flex-direction: column; gap: 1.5rem; }
+        .testimonial-card {
+            background: white; padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow);
+            border-left: 4px solid; border-image: var(--primary-gradient) 1 !important;
+            position: relative;
+        }
+        .testimonial-card::before { content: none; }
+        .testimonial-author { 
+            color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; 
+            font-style: italic;
+        }
+
+        .reject-section {
+            background: white; padding: 3rem 1.5rem; max-width: 600px; margin: 0 auto; text-align: center;
+        }
+        .reject-cards { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem; }
+        .reject-card {
+            border: 2px solid #ffebee; padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow);
+        }
+        .reject-card h3 { color: var(--alert); font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .reject-card p { color: var(--text-secondary); }
+
+        .cta-final {
+            background: var(--primary-gradient); color: white; text-align: center; padding: 3rem 1.5rem;
+            border-radius: var(--radius); margin: 2rem 1.5rem;
+        }
+        .cta-final h2 {
+            font-size: clamp(1.3rem, 4vw, 1.75rem); margin-bottom: 1rem; line-height: 1.3;
+        }
+        .cta-final .cta-subtitle {
+            font-size: clamp(1rem, 3.5vw, 1.3rem); margin-bottom: 2rem; opacity: 0.95; line-height: 1.4;
+        }
+        .cta-icons {
+            display: flex; justify-content: center; align-items: center; gap: 1rem;
+            margin-bottom: 2rem; flex-wrap: wrap;
+        }
+        .cta-icon {
+            font-size: 2.5rem; width: 60px; height: 60px; display: flex;
+            align-items: center; justify-content: center; background: rgba(255,255,255,0.2);
+            border-radius: 50%; backdrop-filter: blur(10px);
+        }
+
+        .footer {
+            background: var(--text-primary); color: white; text-align: center; padding: 2rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+            .hero { min-height: 90vh; padding: 2rem 1rem; }
+            .section, .reject-section { padding: 2rem 1rem; }
+            .btn { padding: 1.1rem 1.8rem; font-size: 0.95rem; }
+            .card, .process-step { padding: 1.2rem; }
+            .qr-code { max-width: 150px; }
+            .cta-icon { font-size: 2.2rem; width: 55px; height: 55px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO -->
+    <div class="hero" role="banner" aria-label="鼎质设计工程首页">
+        <div class="hero-content">
+            <div class="hero-badge" aria-label="25年设计施工联合体">I 设计＋施工 I 联合超25年 I</div>
+            <h1>烂尾工程终结者</h1>
+            <div class="hero-tagline">报价即结算 · 100%按时保质交付</div>
+            <div class="hero-features" role="list">
+                <span role="listitem">渗漏返工</span>
+                <span role="listitem">项目翻新或接管</span>
+                <span role="listitem">结构加固</span>
+                <span role="listitem">室内外整体施工</span>
+            </div>
+            <div class="cta-group">
+                <a href="#contact" class="btn btn-primary" onclick="alert('请微信搜索GR2026或扫码咨询')" aria-label="微信咨询">💬 微信 GR2026</a>
+                <a href="tel:13825739828" class="btn btn-secondary">📞 电话咨询</a>
+            </div>
+            <!-- QR for WeChat - 替换为你的实际二维码 -->
+            <div class="qr-section" role="img" aria-label="微信二维码 GR2026">
+                <img src="https://yourdomain.com/qr-gr2026.png" alt="微信扫码添加 GR2026" class="qr-code">
+                <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">扫码免费咨询</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CORE VALUES - 🎨 三张卡片全部紫色渐变背景 -->
+    <section class="section" id="values">
+        <h2 class="section-title">专注解决各类隐蔽风险</h2>
+        <p class="section-subtitle">把不可控 变 完美交付</p>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon" aria-hidden="true">💰</div>
+                <h3>报价即结算</h3>
+                <p>按建筑面积平方单价或按总造价的固定费率收费</p>
+            </div>
+            <div class="card">
+                <div class="card-icon" aria-hidden="true">🔧</div>
+                <h3>专治烂尾工程</h3>
+                <p>渗漏、结构问题、质量不达标，一键解决</p>
+            </div>
+            <div class="card">
+                <div class="card-icon" aria-hidden="true">✓</div>
+                <h3>节点验收制</h3>
+                <p>每个环节都要验收，风险零容忍</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" style="background: white;">
+        <h2 class="section-title">标准化交付流程</h2>
+        <div class="process">
+            <div class="process-step">
+                <div class="process-number">01</div>
+                <div>
+                    <h4>现场勘察</h4>
+                    <p>全面评估风险点</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="process-number">02</div>
+                <div>
+                    <h4>方案确认</h4>
+                    <p>报价锁定，责任明确</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="process-number">03</div>
+                <div>
+                    <h4>节点施工</h4>
+                    <p>分阶段验收把控</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="process-number">04</div>
+                <div>
+                    <h4>按时交付</h4>
+                    <p>提供质保服务</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS - 无内联样式，CSS统一控制 -->
+    <section class="section" id="testimonials">
+        <h2 class="section-title">客户真实口碑</h2>
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <p>"联排别墅共墙防水最难解决，他们彻底搞定，6个月准时交付！"</p>
+                <div class="testimonial-author">— 高律师 · 鼎峰尚境</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"有结构改造需求交给他们超放心，优化梁柱后空间利用率翻倍。"</p>
+                <div class="testimonial-author">— 张局 · 丽水佳园</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"报价就是最终结算，无增项！"</p>
+                <div class="testimonial-author">— 齐老板 · 颐龙湾</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"前队挖地下室差点塌房，他们完美加固修复。"</p>
+                <div class="testimonial-author">— 汪先生 · 万科棠越</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REJECT -->
+    <section class="reject-section">
+        <h2 class="section-title">有些钱，我们不赚</h2>
+        <div class="reject-cards">
+            <div class="reject-card">
+                <h3>❌ 不接受分段验收</h3>
+                <p>风险无法界定，责任不清</p>
+            </div>
+            <div class="reject-card">
+                <h3>❌ 无控价 无限改</h3>
+                <p>没有边界的工程是赌博</p>
+            </div>
+            <div class="reject-card">
+                <h3>❌ 不看材料工艺只想低价</h3>
+                <p>这样的项目注定无法保证质量</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="cta-final" id="contact">
+        <h2>找总工对话</h2>
+        <p class="cta-subtitle">装修没有解决不了的问题</p>
+        <div class="cta-icons" aria-hidden="true">
+            <div class="cta-icon">💬</div>
+            <div class="cta-icon">📞</div>
+        </div>
+        <div class="cta-group">
+            <a href="javascript:;" class="btn btn-primary" onclick="alert('请微信搜索GR2026或扫码咨询')" aria-label="微信GR2026">先聊聊 GR2026</a>
+            <a href="tel:13825739828" class="btn btn-secondary">电话 13825739828</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>鼎质设计工程 | 25年联合体 | 微信GR2026 | 电话13825739828<br>© 2026 鼎质设计工程 粤ICP备xxxxxx号</p>
+    </footer>
+</body>
+</html>
