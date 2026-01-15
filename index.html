@@ -6,7 +6,6 @@
     <title>鼎质设计工程 | 烂尾工程终结者 · 报价即结算 · 别墅装修专家</title>
     <meta name="description" content="25年设计施工联合体，专治别墅烂尾工程、渗漏返工、结构加固。报价即结算，100%按时保质交付。微信">
     
-    <!-- Open Graph for WeChat/Sharing -->
     <meta property="og:title" content="鼎质设计工程 | 烂尾工程终结者">
     <meta property="og:description" content="专治别墅烂尾工程，报价即结算，100%按时交付。微信">
     <meta property="og:image" content="https://givenspeng-ctrl.github.io/dingzhi-landing/wechat-qr.jpg">
@@ -86,12 +85,6 @@
         .btn-secondary { background: var(--alert); color: white; }
         .btn:hover, .btn:active { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0,0,0,0.25); }
 
-        .qr-section { 
-            background: rgba(255,255,255,0.15); border-radius: var(--radius); 
-            padding: 1.5rem; margin: 1rem 0; backdrop-filter: blur(10px); 
-        }
-        .qr-code { max-width: 180px; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
-
         .section { padding: 3rem 1.5rem; max-width: 600px; margin: 0 auto; }
         .section-title {
             font-size: clamp(1.6rem, 6vw, 2.2rem); text-align: center; margin-bottom: 1rem;
@@ -101,7 +94,6 @@
             text-align: center; color: var(--text-secondary); font-size: 1rem; margin-bottom: 2rem; font-weight: 500;
         }
 
-        /* 三张卡片统一紫色渐变背景 */
         .cards { display: flex; flex-direction: column; gap: 1.5rem; }
         .card {
             background: var(--primary-gradient) !important;
@@ -130,15 +122,10 @@
             text-align: center; 
             position: relative; z-index: 1;
         }
-        .card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 20px 50px rgba(102,126,234,0.4); 
-        }
 
-        .process { display: flex; flex-direction: column; gap: 2rem; }
         .process-step {
             display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem; background: white;
-            border-radius: var(--radius); box-shadow: var(--shadow);
+            border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 1.5rem;
         }
         .process-number {
             width: 45px; height: 45px; background: var(--primary-gradient); color: white;
@@ -146,203 +133,180 @@
             font-weight: 700; font-size: 1.1rem; flex-shrink: 0;
         }
 
-        .testimonials { display: flex; flex-direction: column; gap: 1.5rem; }
         .testimonial-card {
             background: white; padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow);
             border-left: 4px solid; border-image: var(--primary-gradient) 1 !important;
-            position: relative;
+            margin-bottom: 1.5rem;
         }
-        .testimonial-card::before { content: none; }
         .testimonial-author { 
             color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; 
             font-style: italic;
         }
 
-        .reject-section {
-            background: white; padding: 3rem 1.5rem; max-width: 600px; margin: 0 auto; text-align: center;
-        }
-        .reject-cards { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem; }
         .reject-card {
             border: 2px solid #ffebee; padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow);
+            margin-bottom: 1rem; text-align: center; background: white;
         }
         .reject-card h3 { color: var(--alert); font-size: 1.3rem; margin-bottom: 0.5rem; }
-        .reject-card p { color: var(--text-secondary); }
+
+        /* 修复重点：二维码展示区域 */
+        .qr-display-area {
+            background: #fff;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-top: 2px dashed #ddd;
+        }
+        .qr-container {
+            background: white;
+            display: inline-block;
+            padding: 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin: 1.5rem 0;
+        }
+        .qr-large {
+            width: 220px;
+            height: 220px;
+            display: block;
+            margin: 0 auto;
+        }
+        .scan-tip {
+            color: var(--success);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            display: block;
+        }
 
         .cta-final {
             background: var(--primary-gradient); color: white; text-align: center; padding: 3rem 1.5rem;
             border-radius: var(--radius); margin: 2rem 1.5rem;
         }
-        .cta-final h2 {
-            font-size: clamp(1.3rem, 4vw, 1.75rem); margin-bottom: 1rem; line-height: 1.3;
-        }
-        .cta-final .cta-subtitle {
-            font-size: clamp(1rem, 3.5vw, 1.3rem); margin-bottom: 2rem; opacity: 0.95; line-height: 1.4;
-        }
-        .cta-icons {
-            display: flex; justify-content: center; align-items: center; gap: 1rem;
-            margin-bottom: 2rem; flex-wrap: wrap;
-        }
-        .cta-icon {
-            font-size: 2.5rem; width: 60px; height: 60px; display: flex;
-            align-items: center; justify-content: center; background: rgba(255,255,255,0.2);
-            border-radius: 50%; backdrop-filter: blur(10px);
-        }
-
         .footer {
             background: var(--text-primary); color: white; text-align: center; padding: 2rem 1.5rem;
             font-size: 0.9rem;
         }
 
         @media (max-width: 480px) {
-            .hero { min-height: 90vh; padding: 2rem 1rem; }
-            .section, .reject-section { padding: 2rem 1rem; }
-            .btn { padding: 1.1rem 1.8rem; font-size: 0.95rem; }
-            .card, .process-step { padding: 1.2rem; }
-            .qr-code { max-width: 150px; }
-            .cta-icon { font-size: 2.2rem; width: 55px; height: 55px; }
+            .hero { min-height: 90vh; }
+            .qr-large { width: 200px; height: 200px; }
         }
     </style>
 </head>
 <body>
-    <!-- HERO -->
-    <div class="hero" role="banner" aria-label="鼎质设计工程首页">
+    <div class="hero" role="banner">
         <div class="hero-content">
-            <div class="hero-badge" aria-label="25年设计施工联合体">I 设计 X 施工 I 联合超25年 I</div>
+            <div class="hero-badge">I 设计 X 施工 I 联合超25年 I</div>
             <h1>烂尾工程终结者</h1>
             <div class="hero-tagline">报价即结算价 · 100%按时保质交付</div>
-            <div class="hero-features" role="list">
-                <span role="listitem">渗漏返工</span>
-                <span role="listitem">项目接管或翻新</span>
-                <span role="listitem">结构加固</span>
-                <span role="listitem">室内外同步施工</span>
+            <div class="hero-features">
+                <span>渗漏返工</span>
+                <span>项目接管或翻新</span>
+                <span>结构加固</span>
+                <span>室内外同步施工</span>
             </div>
             <div class="cta-group">
-                <a href="#contact" class="btn btn-primary" onclick="alert('请微信扫码下方二维码咨询')" aria-label="微信咨询">💬 微信</a>
+                <a href="#qr-section" class="btn btn-primary">💬 微信咨询</a>
                 <a href="tel:13825739828" class="btn btn-secondary">📞 电话咨询</a>
-            </div>
-            <!-- 真实微信二维码 -->
-            <div class="qr-section" role="img" aria-label="微信二维码">
-                <img src="wechat-qr.jpg" alt="微信扫码添加" class="qr-code">
-                <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">扫码添加微信 · 免费咨询</p>
             </div>
         </div>
     </div>
 
-    <!-- CORE VALUES -->
-    <section class="section" id="values">
+    <section class="section">
         <h2 class="section-title">专注解决各类隐蔽风险</h2>
         <p class="section-subtitle">把不可控 变 完美交付</p>
         <div class="cards">
             <div class="card">
-                <div class="card-icon" aria-hidden="true">💰</div>
+                <div class="card-icon">💰</div>
                 <h3>报价即结算价，不存在隐藏增项</h3>
                 <p>按每平方单价或按总造价的固定费率收费</p>
             </div>
             <div class="card">
-                <div class="card-icon" aria-hidden="true">🔧</div>
+                <div class="card-icon">🔧</div>
                 <h3>专治烂尾工程</h3>
                 <p>渗漏、结构、设计、施工质量不达标问题，一站解决</p>
             </div>
             <div class="card">
-                <div class="card-icon" aria-hidden="true">✓</div>
+                <div class="card-icon">✓</div>
                 <h3>分段节点验收制</h3>
                 <p>每个环节都要验收，风险零容忍</p>
             </div>
         </div>
     </section>
 
-    <!-- PROCESS -->
-    <section class="section" style="background: white;">
-        <h2 class="section-title">标准化交付流程</h2>
-        <div class="process">
+    <section class="section" style="background: white; max-width: 100%;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h2 class="section-title">标准化交付流程</h2>
             <div class="process-step">
                 <div class="process-number">01</div>
-                <div>
-                    <h4>现场勘察</h4>
-                    <p>全面评估风险点</p>
-                </div>
+                <div><h4>现场勘察</h4><p>全面评估风险点</p></div>
             </div>
             <div class="process-step">
                 <div class="process-number">02</div>
-                <div>
-                    <h4>方案确认</h4>
-                    <p>报价锁定，责任明确</p>
-                </div>
+                <div><h4>方案确认</h4><p>报价锁定，责任明确</p></div>
             </div>
             <div class="process-step">
                 <div class="process-number">03</div>
-                <div>
-                    <h4>节点施工</h4>
-                    <p>分阶段验收 节点把控</p>
-                </div>
+                <div><h4>节点施工</h4><p>分阶段验收 节点把控</p></div>
             </div>
             <div class="process-step">
                 <div class="process-number">04</div>
-                <div>
-                    <h4>按时交付</h4>
-                    <p>提供五年质保服务</p>
-                </div>
+                <div><h4>按时交付</h4><p>提供五年质保服务</p></div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="section" id="testimonials">
+    <section class="section">
         <h2 class="section-title">客户真实口碑</h2>
-        <div class="testimonials">
-            <div class="testimonial-card">
-                <p>"联排别墅共墙防水最难解决，他们彻底搞定，6个月准时交付！"</p>
-                <div class="testimonial-author">— 高律师 · 鼎峰尚境</div>
-            </div>
-            <div class="testimonial-card">
-                <p>"有结构改造需求交给他们超放心，优化梁柱后空间利用率翻倍。"</p>
-                <div class="testimonial-author">— 张局 · 丽水佳园</div>
-            </div>
-            <div class="testimonial-card">
-                <p>"报价就是最终结算，无增项！"</p>
-                <div class="testimonial-author">— 齐医生 · 颐龙湾</div>
-            </div>
-            <div class="testimonial-card">
-                <p>"前队挖地下室差点塌房，他们完美加固修复。"</p>
-                <div class="testimonial-author">— 汪先生 · 万科棠越</div>
-            </div>
+        <div class="testimonial-card">
+            <p>"联排别墅共墙防水最难解决，他们彻底搞定，6个月准时交付！"</p>
+            <div class="testimonial-author">— 高律师 · 鼎峰尚境</div>
+        </div>
+        <div class="testimonial-card">
+            <p>"有结构改造需求交给他们超放心，优化梁柱后空间利用率翻倍。"</p>
+            <div class="testimonial-author">— 张局 · 丽水佳园</div>
+        </div>
+        <div class="testimonial-card">
+            <p>"前队挖地下室差点塌房，他们完美加固修复。"</p>
+            <div class="testimonial-author">— 汪先生 · 万科棠越</div>
         </div>
     </section>
 
-    <!-- REJECT -->
-    <section class="reject-section">
+    <section class="section">
         <h2 class="section-title">有些钱，我们赚不了</h2>
-        <div class="reject-cards">
-            <div class="reject-card">
-                <h3>❌ 不接受分段节点验收</h3>
-                <p>风险无法界定，责任不清</p>
-            </div>
-            <div class="reject-card">
-                <h3>❌ 无控价 无限改</h3>
-                <p>没有边界的工程是赌博</p>
-            </div>
-            <div class="reject-card">
-                <h3>❌ 不看材料工艺 只想低价</h3>
-                <p>这样的项目注定无法保证质量</p>
-            </div>
+        <div class="reject-card">
+            <h3>❌ 不接受分段节点验收</h3>
+            <p>风险无法界定，责任不清</p>
+        </div>
+        <div class="reject-card">
+            <h3>❌ 无控价 无限改</h3>
+            <p>没有边界的工程是赌博</p>
+        </div>
+        <div class="reject-card">
+            <h3>❌ 不看材料工艺 只想低价</h3>
+            <p>这样的项目注定无法保证质量</p>
         </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <div class="cta-final" id="contact">
-        <h2>找总负责人对话</h2>
-        <p class="cta-subtitle">装修没有解决不了的问题，先一起聊聊</p>
-        <div class="cta-icons" aria-hidden="true">
-            <div class="cta-icon">💬</div>
-            <div class="cta-icon">📞</div>
+    <section id="qr-section" class="qr-display-area">
+        <h2 class="section-title">联系总负责人</h2>
+        <p style="color:var(--text-secondary)">长按识别下方二维码，添加微信沟通</p>
+        <div class="qr-container">
+            <img src="wechat-qr.jpg" alt="微信二维码" class="qr-large">
+            <span class="scan-tip">↑ 长按图片 识别二维码 ↑</span>
         </div>
+        <p style="margin-top: 1rem; font-weight: 600;">微信号：13825739828</p>
+    </section>
+
+    <div class="cta-final">
+        <h2>找总负责人对话</h2>
+        <p style="margin-bottom: 2rem; opacity: 0.9;">装修没有解决不了的问题，先一起聊聊</p>
         <div class="cta-group">
-            <a href="javascript:;" class="btn btn-primary" onclick="alert('请微信扫码页面上的二维码联系')" aria-label="微信">找总工聊聊</a>
-            <a href="tel:13825739828" class="btn btn-secondary"> 13825739828</a>
+            <a href="#qr-section" class="btn btn-primary">找总工聊聊</a>
+            <a href="tel:13825739828" class="btn btn-secondary">📞 直接拨打电话</a>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>鼎质 | 设计 X 工程 25年联合体 | 13825739828<br>© 鼎质设计工程 粤ICP备xxxxxx号</p>
     </footer>
